@@ -62,4 +62,15 @@ public class fizzBuzzWhizzTest {
         //then
         assertEquals("fizzbuzz", actual);
     }
+
+    @Test
+    void should_return_fizzbuzzwhizz_when_paly_fizz_buzz_whizz_given_105() {
+        //given
+        int number = 105;
+        //when
+        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz();
+        String actual = fizzBuzzWhizz.playFizzBuzzWhizz(number);
+        //then
+        assertEquals("fizzbuzzwhizz", actual);
+    }
 }
