@@ -1,23 +1,22 @@
 package junit5.tdd;
 
+import com.google.common.base.Strings;
+
 public class FizzBuzzWhizz {
     public String playFizzBuzzWhizz(int number){
-        if(number % 105 == 0){
-            return "fizzbuzzwhizz";
-        }
-        if(number % 15 == 0){
-            return "fizzbuzz";
-        }
+        String result = "";
         if(number % 3 == 0){
-            return "fizz";
+            result += "fizz";
         }
         if(number % 5 == 0){
-            return "buzz";
+            result += "buzz";
         }
-        if(number % 7 == 0){
-            return "whizz";
+        if(number % +7 == 0){
+            result += "whizz";
         }
-        return String.valueOf(number);
+        if(result.equals(""))
+            return String.valueOf(number);
+        return result;
     }
 
 }
